@@ -1,4 +1,4 @@
-package com.jackrjie.tracler_domain
+package com.jackrjie.tracker_domain
 
 import org.junit.Test
 

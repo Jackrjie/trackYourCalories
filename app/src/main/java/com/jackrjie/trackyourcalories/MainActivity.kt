@@ -13,8 +13,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.jackrjie.core.navigation.Route
+import com.jackrjie.onboarding_presentation.activity.ActivityScreen
 import com.jackrjie.onboarding_presentation.age.AgeScreen
 import com.jackrjie.onboarding_presentation.gender.GenderScreen
+import com.jackrjie.onboarding_presentation.goal.GoalScreen
 import com.jackrjie.onboarding_presentation.height.HeightScreen
 import com.jackrjie.onboarding_presentation.weight.WeightScreen
 import com.jackrjie.onboarding_presentation.welcome.WelcomeScreen
@@ -39,7 +41,7 @@ class MainActivity : ComponentActivity() {
                     Box(
                         modifier = Modifier
                             .fillMaxSize()
-                            .padding(contentPadding)
+                            .padding(top = contentPadding.calculateTopPadding())
                     ) {
                         NavHost(
                             navController = navController,
@@ -73,10 +75,10 @@ class MainActivity : ComponentActivity() {
 
                             }
                             composable(Route.ACTIVITY) {
-
+                                ActivityScreen(onNavigate = navController::navigate)
                             }
                             composable(Route.GOAL) {
-
+                                GoalScreen(onNavigate = navController::navigate)
                             }
                             composable(Route.TRACKER_OVERVIEW) {
 

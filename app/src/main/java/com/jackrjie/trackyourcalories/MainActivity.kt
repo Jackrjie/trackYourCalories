@@ -15,6 +15,8 @@ import androidx.navigation.compose.rememberNavController
 import com.jackrjie.core.navigation.Route
 import com.jackrjie.onboarding_presentation.age.AgeScreen
 import com.jackrjie.onboarding_presentation.gender.GenderScreen
+import com.jackrjie.onboarding_presentation.height.HeightScreen
+import com.jackrjie.onboarding_presentation.weight.WeightScreen
 import com.jackrjie.onboarding_presentation.welcome.WelcomeScreen
 import com.jackrjie.trackyourcalories.navigation.navigate
 import com.jackrjie.trackyourcalories.ui.theme.TrackYourCaloriesTheme
@@ -56,10 +58,16 @@ class MainActivity : ComponentActivity() {
                                 GenderScreen(onNavigate = navController::navigate)
                             }
                             composable(Route.HEIGHT) {
-
+                                HeightScreen(
+                                    scaffoldState = scaffoldState,
+                                    onNavigate = navController::navigate
+                                )
                             }
                             composable(Route.WEIGHT) {
-
+                                WeightScreen(
+                                    scaffoldState = scaffoldState,
+                                    onNavigate = navController::navigate
+                                )
                             }
                             composable(Route.NUTRIENT_GOAL) {
 

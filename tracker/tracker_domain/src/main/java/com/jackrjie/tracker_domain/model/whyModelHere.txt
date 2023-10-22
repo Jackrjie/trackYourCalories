@@ -1,0 +1,2 @@
+In Clean Architecture, Domain layer is data and presentation layer can access it, but itself cannot access to the other layer.
+When we need a model class, here is the package to place those classes.
